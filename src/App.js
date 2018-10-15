@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Display from './components/Display';
+import Square from './components/Square'
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
       display: "",
-      allowOperation: false,
-      allowCalculation: false,
     }
   }
 
@@ -164,26 +163,6 @@ class App extends Component {
         </div>
       </div>
     );
-  }
-}
-
-class Display extends Component {
-  render() {
-    return (
-      <div className="display">
-        {this.props.display}
-      </div>
-    )
-  }
-}
-
-class Square extends Component {
-  render() {
-    return (
-      <div className="square" onClick={() => this.props.onClick()}>
-        {this.props.value}
-      </div>
-    )
   }
 }
 
